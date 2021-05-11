@@ -11,7 +11,7 @@ export default function Like({likes , postId , Nlike}) {
     const addLike = () =>{
         
     }
-    //this component is a only a test file this mean that like function maybe not be implement in the final version
+    //this component is only a test file this mean that like function maybe not be implement in the final version
     return (
         <div className="like">
                 <label htmlFor="likeInput">
