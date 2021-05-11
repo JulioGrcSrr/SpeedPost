@@ -1,0 +1,11 @@
+.signInButton{
+    background-color: rgb(0, 162, 255);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 2vh; 
+    max-width: 16vh;
+    padding: 0.8vh 1vh;
+    border-radius: 0.8vh;
+    font-weight: 500;
+
+}

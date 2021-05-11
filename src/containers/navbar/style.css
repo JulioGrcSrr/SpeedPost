@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+   justify-content: space-between;
+   padding: 1vh 1vh;
+   background-color: rgb(81, 148, 211);
+   align-items: center;
+   color: rgb(0, 0, 0);
+}
+
+.App-logo{
+    height: 8vh;
+    width: 14vh;
+    padding: 0;
+}
+
+.imgProfile{
+    height: 5vh;
+    border-radius: 5vh;
+}

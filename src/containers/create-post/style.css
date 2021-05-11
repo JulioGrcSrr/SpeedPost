@@ -1,0 +1,52 @@
+.createPost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+    color: rgb(0, 0, 0);
+}
+
+.createPost__imageUpload > input {
+    display: none;
+}
+
+.createPost_uploadBtn{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.createPost__loggedIn{
+    background-color: rgb(255, 255, 255);
+    width: 48vw;
+    border-radius: 1.5vh;
+    padding: 2vh 2.2vh;
+}
+
+.createPost__loggedInBottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.createPost__textarea{
+    border: none;
+    width: 100%;
+    outline: none;
+    resize: none;
+    margin-top: 1vh;
+    font-family:'Poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.createPost__textarea :focus {
+    outline: none;
+}
+
+#image-preview{
+    display: none;
+    height: 15vh;
+    margin: 1vh;
+    border-radius: 1.5vh;
+}
