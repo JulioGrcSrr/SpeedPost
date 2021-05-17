@@ -2,7 +2,6 @@ import './App.css';
 import { UserContextProvider } from './contexts/user';
 import Home from './pages/home';
 
-
 function App() {
   return (
     <UserContextProvider>
