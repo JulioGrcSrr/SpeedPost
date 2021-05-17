@@ -1,0 +1,16 @@
+.message{
+    background-color: white;
+    width: 40vw;
+    padding: 1vh;
+    border-radius: 1.5vh;
+    margin: 2vh;
+}
+
+
+
+.message_messagePhoto{
+    width: 100%;
+    margin: 1vh 0vh;
+    object-fit: cover;
+}
+
