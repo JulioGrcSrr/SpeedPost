@@ -1,0 +1,51 @@
+.createMessage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.createMessage__imageUpload > input {
+    display: none;
+}
+
+.createMessage_uploadBtn{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.createMessage__loggedIn{
+    background-color: rgb(255, 255, 255);
+    width: 48vw;
+    border-radius: 1.5vh;
+    margin-top: 10vh;
+}
+
+.createMessage__loggedInBottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.createMessage__textarea{
+    border: none;
+    width: 100%;
+    outline: none;
+    resize: none;
+    margin-top: 1vh;
+    font-family:'Poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.createMessage__textarea :focus {
+    outline: none;
+}
+
+#image-preview{
+    display: none;
+    height: 15vh;
+    margin: 1vh;
+    border-radius: 1.5vh;
+}
