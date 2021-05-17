@@ -1,0 +1,52 @@
+.createRoom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+    color: rgb(0, 0, 0);
+}
+
+.createRoom__imageUpload > input {
+    display: none;
+}
+
+.createRoom_uploadBtn{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    right: 100%;
+}
+
+.createRoom__loggedIn{
+    background-color: rgb(255, 255, 255);
+    width: 48vw;
+    border-radius: 1.5vh;
+    padding: 2vh 2.2vh;
+}
+
+.createRoom__loggedInBottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.createRoom__textarea{
+    border: none;
+    width: 100%;
+    outline: none;
+    resize: none;
+    margin-top: 1vh;
+    font-family:'Poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.createRoom__textarea :focus {
+    outline: none;
+}
+
+.createRoom_createBtnBox{
+    display: flex;
+    justify-content: space-between;
+    
+}
