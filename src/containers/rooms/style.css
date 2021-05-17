@@ -1,0 +1,54 @@
+.room{
+    background-color: white;
+    width: 55vw;
+    padding: 3vh;
+    border-radius: 1.5vh;
+    padding: 3vh;
+    margin: 2vh;
+}
+
+.room_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.room_headerLeft{
+    display: flex;
+    align-items: center;
+}
+
+.room_userImg{
+    height: 3vh;
+    border-radius: 5vh;
+}
+
+.room_deleteBtn{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1.5vh;
+}
+
+.room_deleteBtn:focus {
+    outline: none;
+}
+
+.room_roomPhoto{
+    width: 100%;
+    margin: 1vh 0vh;
+    object-fit: cover;
+}
+
+.room_content{
+    padding-top: 1.5vh;
+}
+
+.room_body{
+    height: 70vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.room_date{
+    padding-right: 2.5vh;
+    font-size: 1.2vh;
+}
