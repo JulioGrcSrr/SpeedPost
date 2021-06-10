@@ -4,24 +4,32 @@ import { CommentInput } from '../../components';
 import { UserContext } from '../../contexts/user'
 import './style.css';
 import { db, storage } from '../../firebase';
-export default function Post({profileUrl , username , id , photoUrl , content , comments, userId, likes , Nlike}) {
+import useSound from "use-sound";
+import deleteSound from '../../resources/sounds/deleteSound.mp3';
+
+
+export default function Post({profileUrl , username , id , photoUrl , content , comments, userId, likes , Nlike , date}) {
     // eslint-disable-next-line
     const [user, setUser] = useContext(UserContext).user;
-    //delete the post 
+
+    const [playDelete] = useSound(deleteSound)
+
     const handleDelete = () =>{
         if(userId == user.uid){
+            if(photoUrl){
                 let pictureRef = storage.refFromURL(photoUrl);
                 pictureRef.delete()
                 .then(() => {
                     console.log('the image was remove from storage')
                 });
+            }
                 db.collection("posts").doc(id).delete().then(() => {
                     console.log("Document successfully deleted!");
                 }).catch((error) => {
                     console.error("Error removing document: ", error);
                 });
                 
-                
+            playDelete();    
         }
     }
 
@@ -32,7 +40,6 @@ export default function Post({profileUrl , username , id , photoUrl , content , 
                     <img className="post_userImg" src={profileUrl} />
                     <p style={{marginLeft: '1.5vh'}}>{username}</p>
                 </div>
-                {/* delete button only appear if the userId is the same */}
                 {userId === user.uid && <button className="post_deleteBtn" onClick={handleDelete}>Delete</button>}
                 
             </div>
@@ -44,9 +51,10 @@ export default function Post({profileUrl , username , id , photoUrl , content , 
                     <span style={{marginRight: '1vh'}}><b>{username}</b></span> 
                     {content}
                 </p>
-                <Like Nlike={Nlike} likes={likes} postId={id} UId={userId}/>
             </div>
-            
+            <div className="post_date">
+                    <p>Posted at {date}</p>
+            </div>
             {comments ? comments.map((comments) => <Comment username={comments.username} content={comments.comment}/>) : <></>}
             { user ? <CommentInput comments={comments} id={id} /> : <p></p>}
             

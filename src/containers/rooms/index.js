@@ -3,12 +3,14 @@ import { UserContext } from '../../contexts/user'
 import './style.css';
 import { db, storage } from '../../firebase';
 import { CreateMessage, Message } from '../../components';
+import useSound from "use-sound";
+import deleteSound from '../../resources/sounds/deleteSound.mp3';
 export default function Room({profileUrl , username , id , photoUrl , title, userId , Roomtimestamp}) {
     
     // eslint-disable-next-line
     const [user, setUser] = useContext(UserContext).user;
     const [messages, setMessages] = useState([]);
-
+    const [playDelete] = useSound(deleteSound);
     useEffect(() => {
         db.collection('rooms').doc(id).collection('messages').orderBy('timestamp' , 'asc').onSnapshot((snapshot) => 
         {
@@ -34,7 +36,7 @@ export default function Room({profileUrl , username , id , photoUrl , title, use
                 }).catch((error) => {
                     console.error("Error removing document: ", error);
                 });
-                
+                playDelete();    
                 
         }
     }

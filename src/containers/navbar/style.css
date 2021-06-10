@@ -10,10 +10,25 @@
 .App-logo{
     height: 8vh;
     width: 14vh;
-    padding: 0;
+    padding-left: 2vh;
 }
 
 .imgProfile{
     height: 5vh;
     border-radius: 5vh;
+    
+    
+}
+
+.logoutbtn{
+    
+    font-size: x-large;
+}
+
+.navbarOptions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh;
+    width: 20vh;
 }

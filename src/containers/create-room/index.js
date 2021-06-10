@@ -3,29 +3,35 @@ import { UserContext } from '../../contexts/user'
 import './style.css'
 import { db, storage } from '../../firebase';
 import makeid from '../../helper/functions';
+import uploadSound from '../../resources/sounds/uploadSound.mp3';
+import useSound from "use-sound";
 import firebase from 'firebase';
 
 export default function CreateRoom() {
     var ts = new Date();
     const [user, setUser] = useContext(UserContext).user;
 
+    const audioEl = document.getElementsByClassName("audio-element")[0]
+
     const [caption, setCaption] = useState("");
 
     const [progress, setProgress] = useState(0);
 
-
+    const [playUpload] = useSound(uploadSound);
 
     const handleUpload = () => {
+        var usernameFilter = user.email.split('@' , 1);
         if(caption != ""){
             
             db.collection("rooms").add({
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 date: ts.toDateString(),
                 title : caption, 
-                username: user.email.replace("@gmail.com","").replace("@iescampanillas.com" , ""),
+                username: usernameFilter[0],
                 profileUrl: user.photoURL,
                 userId : user.uid,
             })
+            playUpload();
             setCaption("");
             setProgress(0);
         }

@@ -1,5 +1,5 @@
 import React, { useContext , useState } from 'react'
-import SiginButton from '../../components/signinbutton'
+import LogoutButton from '../../components/logoutbutton';
 import { UserContext } from '../../contexts/user'
 import logo from './logoSpeedPost.svg'
 
@@ -10,10 +10,14 @@ export default function Navbar() {
 
     return (
         <div className="navbar">
-            <p>SpeedPost</p>
                <img src={logo} className="App-logo" alt='logo'/> 
-               
+               <p style={{paddingLeft: '4vh' , fontSize: '3vh'}}>SpeedPost</p>
+               <div className="navbarOptions">
+                   <p></p>
+                    {user ? <LogoutButton  style={{cursor:"pointer" ,  fontSize:'2.5vh'}}/>  : <p></p>}
                     {user ? <img className='imgProfile' src={user.photoURL}/> : <p></p>}
+               </div>
+                   
         </div>
     );
 }
