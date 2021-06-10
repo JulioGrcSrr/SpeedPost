@@ -1,9 +1,31 @@
 .home{
-    background-color: whitesmoke;
-    height: 100vh;
+    background-color: rgba(245, 245, 245, 0);
 }
 
 .homeBox{
     width: 100%;
-    height: 60vh;
+}
+
+.homeLayout{
+    height: 100%;
+}
+
+.siteBtn{
+    margin-top: 1.8vh;
+    margin-left: 1.5vh;
+    min-width: 8vw;
+    border-style: solid ;
+    border-width: 1px;
+    border-radius: 1.2vh;
+    background-color: rgb(81, 148, 211);
+    width: 3.5vw;
+    height: 3vh;
+    font-size: 1.5vh;
+    font-family:'Poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+   
 }
