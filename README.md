@@ -7,3 +7,4 @@ discussion rooms where all users can participate y real time</p>
 <p>The styles are made using css and <a href="https://material-ui.com/">Material-ui</a> for the icons</p>
 <p>The application has a google login which provides a fast and secure login </p>
 <p>The database has the following collections <b>Users</b>, <b>Post</b>, <b>Comments</b>, <b>Rooms</b> and <b>Messages</b></p>
+<img src="/databaseSpeedPost" alt="database"/>
